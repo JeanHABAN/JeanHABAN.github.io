@@ -107,34 +107,34 @@ the input
 • 3% for sales above $500 
  */
 
-// let conf = confirm("are you salaried?");
-// let sales = +prompt("What's your sales?", "");
-// let comm = null;
-// if(conf==true){
-//     if(sales <= 300 ){
-//         comm = 0;
-//         alert("commission fees: "+comm);
+let conf = confirm("are you salaried?");
+let sales = +prompt("What's your sales?", "");
+let comm = null;
+if(conf==true){
+    if(sales <= 300 ){
+        comm = 0;
+        alert("commission fees: "+comm);
            
-//     }
-//     else if(sales > 300 && sales < 500){
-//         comm = sales*0.01;
-//         alert("commission fees: "+comm);
-//     }
-//     else {
-//         comm = sales*0.02;
-//         alert("commission fees: "+comm);
-//     }
+    }
+    else if(sales > 300 && sales < 500){
+        comm = sales*0.01;
+        alert("commission fees: "+comm);
+    }
+    else {
+        comm = sales*0.02;
+        alert("commission fees: "+comm);
+    }
     
-// }else{
-//     if(sales > 300 && sales < 500){
-//         comm = sales*0.02;
-//         alert("commission fees: "+comm);
-//     }else{
-//         comm = sales*0.03;
-//         alert("commission fees: "+comm);
-//     }
+}else{
+    if(sales > 300 && sales < 500){
+        comm = sales*0.02;
+        alert("commission fees: "+comm);
+    }else{
+        comm = sales*0.03;
+        alert("commission fees: "+comm);
+    }
     
-// }
+}
 
 /**
  * Write a loop that continually prompts for age until you enter age older than 18
@@ -224,7 +224,7 @@ compounds interest monthly. Prompt the user for the
 // }
 // console.log(sum());
 
-/**
+/** 
  * Write a function named testPrime that returns true when the argument to the
 function is a prime number, otherwise returns false.
 • (Best practice to first write the steps in English )
