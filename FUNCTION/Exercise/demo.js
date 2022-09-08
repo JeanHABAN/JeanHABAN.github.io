@@ -107,34 +107,34 @@ the input
 • 3% for sales above $500 
  */
 
-let conf = confirm("are you salaried?");
-let sales = +prompt("What's your sales?", "");
-let comm = null;
-if(conf==true){
-    if(sales <= 300 ){
-        comm = 0;
-        alert("commission fees: "+comm);
+// let conf = confirm("are you salaried?");
+// let sales = +prompt("What's your sales?", "");
+// let comm = null;
+// if(conf==true){
+//     if(sales <= 300 ){
+//         comm = 0;
+//         alert("commission fees: "+comm);
            
-    }
-    else if(sales > 300 && sales < 500){
-        comm = sales*0.01;
-        alert("commission fees: "+comm);
-    }
-    else {
-        comm = sales*0.02;
-        alert("commission fees: "+comm);
-    }
+//     }
+//     else if(sales > 300 && sales < 500){
+//         comm = sales*0.01;
+//         alert("commission fees: "+comm);
+//     }
+//     else {
+//         comm = sales*0.02;
+//         alert("commission fees: "+comm);
+//     }
     
-}else{
-    if(sales > 300 && sales < 500){
-        comm = sales*0.02;
-        alert("commission fees: "+comm);
-    }else{
-        comm = sales*0.03;
-        alert("commission fees: "+comm);
-    }
+// }else{
+//     if(sales > 300 && sales < 500){
+//         comm = sales*0.02;
+//         alert("commission fees: "+comm);
+//     }else{
+//         comm = sales*0.03;
+//         alert("commission fees: "+comm);
+//     }
     
-}
+// }
 
 /**
  * Write a loop that continually prompts for age until you enter age older than 18
@@ -256,3 +256,58 @@ function testPrime(num){
 
 console.log(" expected answer", testPrime(15));
 
+let x =1, y = 2;
+let message = "Hi";
+if(x < 2){
+  if(y > 7){
+    message = "bye";
+  } else{
+    message ="Hola";
+  }
+}
+message ="Hello";
+console.log(message);
+
+let x1= 1;
+let y1 = '2';
+let z = true;
+let s = x1 + y1;
+console.log(s);
+console.log(typeof(s));
+x1 = x1 + z;
+console.log(x1);
+console.log(typeof(x1));
+y1 = x1++ * y1;
+console.log(y1);
+console.log(typeof y1);
+s = parseInt(s);
+s +='3';
+console.log(s);
+console.log(typeof s);
+z =!!s;
+console.log(z);
+console.log(typeof z);
+
+let age = 10;
+
+console.log(age);
+
+function output() {
+
+  age = 20;
+
+  console.log(age);
+
+}
+
+output();
+
+console.log(age);
+const foo = console.log("hello");
+
+function write2file(content) {
+  fsys.writeFile("./testWrite.txt", content, function () {});
+}
+  const returnVal = write2file( Math.max(1, 2, 3));
+
+  

@@ -159,3 +159,9 @@ function calcDistance(x1, y1, x2, y2) {
   let distance = Math.sqrt((x2 - x1)*(x2 - x1)+ (y2 - y1)*(y2 -y1));
   return distance.toFixed(2);
 }
+
+function cube(num){ return num * num * num; };
+
+console.log("expect 0: ", cube(0));
+
+console.log("expect -1000: ", cube(-10));
