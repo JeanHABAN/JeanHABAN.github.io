@@ -305,9 +305,26 @@ output();
 console.log(age);
 const foo = console.log("hello");
 
-function write2file(content) {
-  fsys.writeFile("./testWrite.txt", content, function () {});
-}
-  const returnVal = write2file( Math.max(1, 2, 3));
+// function write2file(content) {
+//   fsys.writeFile("./testWrite.txt", content, function () {});
+// }
+//   const returnVal = write2file( Math.max(1, 2, 3));
 
-  
+  let arr =["eric", "you","hi"];
+  console.log(arr[-1]);//undefined
+  console.log(arr.at(-1));//hi
+  let arrr = [1,2,4,8];
+  console.log(arrr[1]);
+
+//  let x =[1]; let y = [1];
+//   console.log(x===x);
+//   console.log([1]===[1]);
+
+  let arra = ["l","m","n"];
+  function quiz (arra){
+    for(let i=0; i<arra.length; i++){
+      arra[i];
+    }
+    return arra.length;
+  }
+  console.log(quiz(arra));

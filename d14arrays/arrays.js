@@ -91,19 +91,53 @@ function reverseArray(array) {
 
     return arr;
 }
+
+//  /**
+//  * 
+//  * @param {array} arr is any array
+//  * @returns {Array} an array with elements reversed
+//  *
+//  */
+// function reverseArray(arr) {
+//     const newArray = [];
+//     for (let i = 0; i < arr.length; i++) {
+//         newArray[arr.length - i - 1] = arr[i];
+//     }
+//     return newArray;
+// }
+
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 /**
  * 
- * @param {array} array input as array
- * @returns return a reverse
+ * @param {array} arr is any array
+ * @returns {Array} the same array with elements reversed
+ *
  */
-function reverseArrayInPlace(array) {
-    let arr1 = array.splice(0);
-    for (let i = arr1.length - 1; i >= 0; i--) {
-        array.push(arr1[i]);
+ function reverseArrayInPlace(arr) {
+    const half = Math.floor(arr.length / 2);
+    for (let i = 0; i < half; i++) {
+        const temp = arr[i];
+        arr[i] = arr[arr.length - i - 1];
+        arr[arr.length - i - 1] = temp;
     }
-    return array;
 
+    return arr;
 }
+
+// /**
+//  * 
+//  * @param {array} array input as array
+//  * @returns return a reverse
+//  */
+// function reverseArrayInPlace(array) {
+//     let arr1 = array.splice(0);
+//     for (let i = arr1.length - 1; i >= 0; i--) {
+//         array.push(arr1[i]);
+//     }
+//     return array;
+
+// }
 
 //####################################### QUESTION 5 #############################################
 
