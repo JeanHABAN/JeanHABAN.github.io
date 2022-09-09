@@ -148,3 +148,17 @@ function getMaxSubSum(arr) {
   console.log( getMaxSubSum([100, -9, 2, -3, 5]) ); // 100
   console.log( getMaxSubSum([1, 2, 3]) ); // 6
   console.log( getMaxSubSum([-1, -2, -3]) ); // 0
+
+  function maxOfThree(a, b, c){ 
+    if(a > b && b > c){
+        return a;
+    }else if (b > a && b > c){
+        return b;
+    }else {
+        return c;
+
+    }
+        
+}
+
+console.log(maxOfThree(2,7,5));
