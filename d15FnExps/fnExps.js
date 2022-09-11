@@ -32,11 +32,4 @@ function myMap(testArray, func){
 
 }
 
-// function myMap(testArray, times100){
-//     let newArr = [];
-//     for(const val of testArray){
-//         newArr.push(times100(val));
-//     }
-//     return newArr;
 
-// }
