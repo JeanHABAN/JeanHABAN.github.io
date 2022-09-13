@@ -95,7 +95,7 @@ function findTitles() {
 function createBook(title, author, libraryID) {
     // const title = document.getElementById("title"); //retrieves the book title from the title textbox
     console.log("title is: ", title.value);
-     //alert("title:  " + title.value);
+    alert("title:  " + title.value);
 
     //const newID = library.length + 5000;  // hack to get a unique id for now
     //finish the implementation -- get the author, create a book object, and add to the library array
