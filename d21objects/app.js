@@ -1,7 +1,7 @@
 "use strict";
 /* eslint-disable*/
 /* You need the module.exports when testing in node.  Comment it out when you send your file to the browser */
-module.exports = { findTitles, findAuthors, findIDs, showTitles, createBook, showAuthor,showIDs }; //add all of your function names here that you need for the node mocha tests
+//module.exports = { findTitles, findAuthors, findIDs, showTitles, createBook, showAuthor,showIDs }; //add all of your function names here that you need for the node mocha tests
 
 /*
 o	createBook, which will take title, author, and libraryID as inputs.  It will create a new book object and add it to the library, 
