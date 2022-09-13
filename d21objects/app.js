@@ -92,17 +92,32 @@ function findTitles() {
  * @returns {undefined} no return
  * Event handler for Add book button.  Creates and adds book to the library
  */
-function createBook(title, author, libraryID) {
-    // const title = document.getElementById("title"); //retrieves the book title from the title textbox
-    //console.log("title is: ", title.value);
-    //alert("title:  " + title.value);
-
-    //const newID = library.length + 5000;  // hack to get a unique id for now
-    //finish the implementation -- get the author, create a book object, and add to the library array
-    let book = { title: title, author: author, libraryID: libraryID };
+ function addBook() {
+    const title = document.getElementById("title").value; //retrieves the book title from the title textbox
+    const author = document.getElementById("author").value;
+    const newID = library.length + 5000; // hack to get a unique id for now
+    let book = createBook(title, author, newID);
+    console.log(book);
     library.push(book);
+    alert("A new book is added to library. \n" + "Title: " + title + "\nAuthor: " + author);
+}
+
+
+/**
+ * 
+ * @param {String} title is a string title of a book
+ * @param {String} author is a string author name of a book
+ * @param {Number} newID is a identification of a book
+ * @returns {Object} return a book with infos of title, author and library ID
+ */
+ function createBook(title, author, newID) {
+    let book = {};
+    book.title = title;
+    book.author = author;
+    book.libraryID = newID;
     return book;
 }
+// function createBook()
 
 /**
  * 
