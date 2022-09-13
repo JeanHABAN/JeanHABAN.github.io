@@ -1,7 +1,7 @@
 "use strict";
 /* eslint-disable*/
 /* You need the module.exports when testing in node.  Comment it out when you send your file to the browser */
-//module.exports = { findTitles, findAuthors, findIDs, showTitles, createBook, showAuthor,showIDs }; //add all of your function names here that you need for the node mocha tests
+module.exports = { findTitles, findAuthors, findIDs, showTitles, createBook, showAuthor,showIDs }; //add all of your function names here that you need for the node mocha tests
 
 /*
 o	createBook, which will take title, author, and libraryID as inputs.  It will create a new book object and add it to the library, 
@@ -43,14 +43,14 @@ function showAuthor() {
 
     /* put all titles into an array, then sort, then join with newline and insert in textarea innerHTML */
 
-    const titles = findTitles();
+    const author = findAuthors();
 
     /*need to sort and then join the titles still (e.g., someArray.join("\n")  */
-    titles.sort();
-    const titleString = titles.join("\n");
+    author.sort();
+    const authorString = author.join("\n");
 
     let textArea = document.getElementById("displayArea");
-    textArea.innerHTML = titleString;
+    textArea.innerHTML = authorString;
 }
 
 
@@ -62,14 +62,14 @@ function showAuthor() {
 
     /* put all titles into an array, then sort, then join with newline and insert in textarea innerHTML */
 
-    const titles = findTitles();
+    const id = findIDs();
 
     /*need to sort and then join the titles still (e.g., someArray.join("\n")  */
-    titles.sort();
-    const titleString = titles.join("\n");
+    id.sort();
+    const idNum = id.join("\n");
 
     let textArea = document.getElementById("displayArea");
-    textArea.innerHTML = titleString;
+    textArea.innerHTML = idNum;
 }
 
 /**
