@@ -1,7 +1,7 @@
 "use strict";
 /* eslint-disable*/
 /* You need the module.exports when testing in node.  Comment it out when you send your file to the browser */
-//module.exports = { findTitles, findAuthors, findIDs,showTitles,createBook }; //add all of your function names here that you need for the node mocha tests
+module.exports = { findTitles, findAuthors, findIDs, showTitles, createBook, showAuthor,showIDs }; //add all of your function names here that you need for the node mocha tests
 
 /*
 o	createBook, which will take title, author, and libraryID as inputs.  It will create a new book object and add it to the library, 
@@ -36,12 +36,49 @@ function showTitles() {
 }
 
 /**
+ * Event handler to display library titles sorted alphabetically
+ * @returns {undefined}
+ */
+function showAuthor() {
+
+    /* put all titles into an array, then sort, then join with newline and insert in textarea innerHTML */
+
+    const titles = findTitles();
+
+    /*need to sort and then join the titles still (e.g., someArray.join("\n")  */
+    titles.sort();
+    const titleString = titles.join("\n");
+
+    let textArea = document.getElementById("displayArea");
+    textArea.innerHTML = titleString;
+}
+
+
+/**
+ * Event handler to display library titles sorted alphabetically
+ * @returns {undefined}
+ */
+ function showIDs() {
+
+    /* put all titles into an array, then sort, then join with newline and insert in textarea innerHTML */
+
+    const titles = findTitles();
+
+    /*need to sort and then join the titles still (e.g., someArray.join("\n")  */
+    titles.sort();
+    const titleString = titles.join("\n");
+
+    let textArea = document.getElementById("displayArea");
+    textArea.innerHTML = titleString;
+}
+
+/**
  * 
  * @return {object} array holding all titles as elements
  */
 function findTitles() {
     let titles = [];
-   
+
     for (let element of library) {
         titles.push(element.title);
     }
@@ -62,8 +99,8 @@ function createBook(title, author, libraryID) {
 
     //const newID = library.length + 5000;  // hack to get a unique id for now
     //finish the implementation -- get the author, create a book object, and add to the library array
-    let book = {title:title, author:author, libraryID: libraryID};
-    library.push( book);
+    let book = { title: title, author: author, libraryID: libraryID };
+    library.push(book);
     return book;
 }
 
@@ -89,11 +126,11 @@ function findAuthors() {
 function findIDs() {
     //implement this
     let idNum = [];
-    
-    for( let element of library){
+
+    for (let element of library) {
         idNum.push(element.libraryID);
     }
-   idNum.sort();
+    idNum.sort();
     return idNum;
 }
 
@@ -101,13 +138,13 @@ function findIDs() {
  * Event handler to display library authors sorted alphabetically
  * @returns {string} the sorted words;
  */
- function scramble() {
+function scramble() {
 
 
     const titles = findTitles();
 
-    const titleString = titles.join(" ").toString().split(" ").sort((aaa,bbb) => (aaa.length > bbb.length)? 1 : -1).join("\n");
+    const titleString = titles.join(" ").toString().split(" ").sort((aaa, bbb) => (aaa.length > bbb.length) ? 1 : -1).join("\n");
 
-    let textArea = document.getElementById("displayArea"); 
+    let textArea = document.getElementById("displayArea");
     textArea.innerHTML = titleString;
 }
