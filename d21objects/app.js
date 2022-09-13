@@ -1,7 +1,7 @@
 "use strict";
 /* eslint-disable*/
 /* You need the module.exports when testing in node.  Comment it out when you send your file to the browser */
-module.exports = { findTitles, findAuthors, findIDs,showTitles,createBook }; //add all of your function names here that you need for the node mocha tests
+//module.exports = { findTitles, findAuthors, findIDs,showTitles,createBook }; //add all of your function names here that you need for the node mocha tests
 
 /*
 o	createBook, which will take title, author, and libraryID as inputs.  It will create a new book object and add it to the library, 
@@ -97,17 +97,17 @@ function findIDs() {
     return idNum;
 }
 
-/**
- * Event handler to display library authors sorted alphabetically
- * @returns {string} the sorted words;
- */
- function scramble() {
+// /**
+//  * Event handler to display library authors sorted alphabetically
+//  * @returns {string} the sorted words;
+//  */
+//  function scramble() {
 
 
-    const titles = findTitles();
+//     const titles = findTitles();
 
-    const titleString = titles.join(" ").toString().split(" ").sort((aaa,bbb) => (aaa.length > bbb.length)? 1 : -1).join("\n");
+//     const titleString = titles.join(" ").toString().split(" ").sort((aaa,bbb) => (aaa.length > bbb.length)? 1 : -1).join("\n");
 
-    let textArea = document.getElementById("displayArea"); 
-    textArea.innerHTML = titleString;
-}
+//     let textArea = document.getElementById("displayArea"); 
+//     textArea.innerHTML = titleString;
+// }
