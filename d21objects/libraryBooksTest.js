@@ -2,8 +2,7 @@
 /*  comment out the exports when running in the browser */
 const assert = require("assert");  //always need this with node
 const myExports = require("./app.js");  //with node need the name of your file with your functions here
-const {findTitles, findAuthors , findIDs, createBook} = myExports;  //do this for all of the functions used in the Mocha tests
-
+const { findTitles, findAuthors , findIDs, createBook} = myExports;  //do this for all of the functions used in the Mocha tests
 
 /*
 Write a JavaScript program that will accept title, author, and libraryID values from an HTML page and create new book objects for each entry.  
@@ -41,7 +40,7 @@ describe("library", function () {
     });
 
     it("create book", function () {
-        const newBook = {title: "My New Book", author: "Me Too", libraryID: 1144};
+        const newBook = {title: "My New Book", author: "Me Too", libraryID: 5003};
         assert.deepEqual(createBook("My New Book",  "Me Too",  1144), newBook);
     });
 
