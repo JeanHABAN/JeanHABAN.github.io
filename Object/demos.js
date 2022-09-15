@@ -175,4 +175,50 @@ const manager = {
   manager.sayHi(); // Hello, my name is John. I am 27.  My job is Software Engineer.'
   intern.sayHi(); // Hello, my name is Ben.  I am 21.  My job is Software Engineer Intern.'
 
-  
+  console.log("foooooooooooooooooooooooo");
+
+  function foo() { //https://jsfiddle.net/keithlevi/78wvohsy/9/
+    console.log(this);     //_____________ { x: 1, y: 100, z: foo() } __________________
+    this.y = this.y + 1; // _____________ no output ___________________
+    console.log(this.y);    }//______________ NaN ______________________}
+const abc = {  x: 1, y: 100, z: foo };
+console.log(abc.z() ); // ___________undefined ____________________
+
+
+/**
+ * use forEach to log all the even elements of an array to the
+console
+[1,5,16,3, 108]
+ */
+
+
+[1,5,16,3, 108].forEach(value => {if(value%2===0)console.log(value);}); // 16, 108
+
+// //second way
+// function logEven(value){
+//     if(value%2===0){
+//         console.log(value);
+//     }
+// }
+// [1,5,16,3, 108].forEach(logEven);
+
+/**
+ * const numbers = [1, 5, 18, 2, 77, 108];
+➢ use filter, find, and findIndex to find
+➢ all the even numbers
+➢ the first even number
+➢ the index of the first even number
+ */
+const number = [1, 5, 18, 2, 77, 108];
+function logEven(value){
+    if(value%2===0){
+        return true;
+    }else{
+        return false;
+    }
+}
+const numEven = number.filter(logEven)
+console.log("expect [18, 2, 108]: ", numEven);
+
+console.log("expect 18: ", number.find(logEven));
+console.log("expect 2: ", number.findIndex(logEven));
