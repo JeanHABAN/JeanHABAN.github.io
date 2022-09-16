@@ -222,3 +222,124 @@ console.log("expect [18, 2, 108]: ", numEven);
 
 console.log("expect 18: ", number.find(logEven));
 console.log("expect 2: ", number.findIndex(logEven));
+
+let myInt = '555gghfggff';
+//myInt = false;
+let x = parseInt(myInt,10);
+console.log(x);
+
+console.log(+"5678"===Number("5678"));
+const s = {name:"john", age:10};
+const g = {name:"john", age:10};
+console.log(s===g);
+
+// const t = 5;
+// t= 6;
+// console.log(t);//error
+const zen ={xed : 5};
+zen.xed = 6;
+console.log(zen);//6 no error
+
+// const zen ={xed : 5};
+// zen = {xed:6};
+// console.log(zen);//error
+
+function area(){
+    console.log(this);  //{ side: 5, area: [Function: area] }
+    return this.side*this.side;
+}
+const square = {side:5, area:area};
+square.area();
+
+const player1 = {name: "Bob", points: [1, 2, 1]};
+const player2 = {name: "Andre", points: [2, 0, 1]};
+const player3 = {name: "Max", points: [1, 1, 1]};
+const players = [player1, player2, player3];
+function sumPoints(players){
+    let sum = 0;
+    for(let i= 0; i<players.length;i++){
+        sum = sum + this.points
+    }
+    return sum;
+}
+
+console.log("expect 10: ", sumPoints(players));
+
+/* write a function findProps to return an array of all the properties in any given object */
+//console.log("expect [a, b, c]: ", findProps({a: 1, b: 2, c: 3}));
+
+const quiz = {};
+quiz.students = [{ sid: 10, answers: [{ qid: 2, ans: "b" }, { qid: 3, ans: "a" }, { qid: 1, ans: "b" }] },
+{ sid: 11, answers: [{ qid: 1, ans: "e" }, { qid: 2, ans: "a" }, { qid: 3, ans: "b" }] },
+{ sid: 12, answers: [{ qid: 3, ans: "b" }, { qid: 2, ans: "a" }, { qid: 1, ans: "d" }] }];
+quiz.key = [{ qid: 1, ans: "b" }, { qid: 2, ans: "a" }, { qid: 3, ans: "b" }];
+
+/**
+ * 
+ * @param {Object} ans1 is an answer object
+ * @param {Object} ans2 is an answer object 
+ * @returns {number} difference of the identifiers
+ */
+ function answerComparator(ans1, ans2) {
+     let sorted=[];
+     for(const sor of quiz.students){
+        let temp=sor.answers.sort((a,b)=>a.qid>b.qid?1:-1) 
+        console.log(temp)//check 
+        sorted.push(temp)
+   }
+   return sorted;
+}
+   console.log(answerComparator(quiz))
+ /* let sortedAn=quiz.students.answers.sort((ans1,ans2)=>ans1.qid>ans2.qid?1:-1)
+ console.log(sortedAn); */
+ 
+ //777777777777777777777777777777777777777777777777777777777777
+
+ let bob = [{first: "Bob"}, {last: "Jones"}, {phone: "x1234"} ]
+ let ned = {first: "Ned", last: "Blue", phone: "x1235"}
+ 
+ function abcd(){ 
+   const arr = [];
+   for(const element of bob ){ arr.push(element);  } return arr;}
+console.log(abcd()); 
+
+function xyz(){ 
+const arr = [];
+   for(const element in bob ){  arr.push(element); } return arr;}
+console.log(xyz()); 
+
+function lmn(){ 
+const arr = [];
+   for(const element in ned ){  arr.push(element); } return arr;}
+console.log(lmn()); 
+
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+function debit(amount) {
+    console.log(this);    
+    this.balance = this.balance  - amount;  
+    console.log(this.balance);   
+}
+const account = {  balance: 10, debit: debit };
+const myDebit = account.debit;
+console.log(myDebit(5));
+//ttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt
+let lama = {
+    x: 2,
+      bar: function() {
+        console.log("ma1: ", this);
+        this.y = true;
+        console.log("ma2: ", this);  }};
+    
+    let lamalin = {
+      bat: function() {
+        this.foo();
+        console.log("lin1: ", this);  },//global
+    
+      __proto__: lama,
+    
+      foo: function() {
+        this.bar();
+        console.log("lin2: ", this);  },
+    };
+    console.log(lamalin.bat());
+    

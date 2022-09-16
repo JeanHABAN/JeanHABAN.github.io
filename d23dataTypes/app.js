@@ -15,7 +15,7 @@ function ucFirst(str) {
     return upStr;
 
 }
-
+console.log(ucFirst("hello"));
 /**
  * 
  * @param {string} str a text has a spam word need to be detected
@@ -23,7 +23,7 @@ function ucFirst(str) {
  */
 function checkSpam(str) {
     const newStr = str.toLowerCase();
-    return newStr.includes("viagra") || newStr.includes("xxxxx");
+    return newStr.includes("viagra") || newStr.includes("xxx");
 }
 
 /**
@@ -33,7 +33,7 @@ function checkSpam(str) {
  * @returns return a new text afer modifying
  */
 function truncate(str, maxlength) {
-    if (str.length > maxlength) {
+    if (str.length >= maxlength) {
         return str.slice(0, maxlength - 1) + "…";
     } else {
         return str;
