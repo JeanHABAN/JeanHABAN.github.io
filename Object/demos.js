@@ -25,61 +25,61 @@ correct answers.
 ➢ use a helper function to compute the score for a given student
 */
 
-// let student1 = {
-//     studentId: s101,
-//     quizAnswers: [1, 1, 2, 4]
-// };
+let student1 = {
+    studentId: "s101",
+    quizAnswers: [1, 1, 2, 4]
+};
 
-// let student2 = {
-//     studentId: s102,
-//     quizAnswers: [2, 1, 2, 2]
-// };
+let student2 = {
+    studentId: "s102",
+    quizAnswers: [2, 1, 2, 2]
+};
 
-// let student3 = {
-//     studentId: s103,
-//     quizAnswers: [3, 1, 3, 4]
-// };
+let student3 = {
+    studentId: "s103",
+    quizAnswers: [3, 1, 3, 4]
+};
 
-// let quiz = [student1, student2, student3];
-// const answers = [3, 1, 2, 4];
+let quiz = [student1, student2, student3];
+const answers = [3, 1, 2, 4];
 
-// /**
-//  * 
-//  * @param {Array} quizArray has student objects 
-//  * @param {*} answers has the correct answers
-//  * @returns {Object} contains quiz scores for each studentid
-//  */
-// function gradeQuiz(quizArray, answers) {
-//     //const grades = {}; //need the object to return
-//     const grades = [];
-//     // loop through the array of students and grade their answers
-//     for (const student of quizArray) {
-//         const studentScore = scoreStudent(student, answers);
-//         grades[student.studentId] = studentScore;
-//         //const stuId = student.studentId;
-//         //grades.push({stuId, studentScore});
-//     }
-//     return grades;
-// }
+/**
+ * 
+ * @param {Array} quizArray has student objects 
+ * @param {*} answers has the correct answers
+ * @returns {Object} contains quiz scores for each studentid
+ */
+function gradeQuiz(quizArray, answers) {
+    //const grades = {}; //need the object to return
+    const grades = [];
+    // loop through the array of students and grade their answers
+    for (const student of quizArray) {
+        const studentScore = scoreStudent(student, answers);
+        grades[student.studentId] = studentScore;
+        //const stuId = student.studentId;
+        //grades.push({stuId, studentScore});
+    }
+    return grades;
+}
 
-// /**
-//  * 
-//  * @param {Object} student is student object 
-//  * @param {*} answers are quiz answers
-//  * @returns {number} score for the quiz
-//  */
-// function scoreStudent(student, answers) {
-//     let score = 0;
-//     for (let i = 0; i < answers.length; i++) {
-//         if (student.quizAnswers[i] === answers[i]) {
-//             score = score + 1;
-//         }
-//     }
-//     return score;
-// }
+/**
+ * 
+ * @param {Object} student is student object 
+ * @param {*} answers are quiz answers
+ * @returns {number} score for the quiz
+ */
+function scoreStudent(student, answers) {
+    let score = 0;
+    for (let i = 0; i < answers.length; i++) {
+        if (student.quizAnswers[i] === answers[i]) {
+            score = score + 1;
+        }
+    }
+    return score;
+}
 
-// console.log("quiz results are: ", gradeQuiz(quiz, answers));
-// console.log("quiz is: ", quiz);
+console.log("quiz results are: ", gradeQuiz(quiz, answers));
+console.log("quiz is: ", quiz);
 
 
 /**
@@ -105,9 +105,9 @@ for (const values of properties) {
     console.log(numbers[values]);
 }
 
-// const a = 5;
-// const b = 5;
-// console.log(a === b);
+const a1 = 5;
+const b1 = 5;
+console.log('heloooo ',a1 === b1);
 
 // const a = {name: "John", age: 10};
 // const b = {name: "John", age: 10};
@@ -268,28 +268,28 @@ console.log("expect 10: ", sumPoints(players));
 /* write a function findProps to return an array of all the properties in any given object */
 //console.log("expect [a, b, c]: ", findProps({a: 1, b: 2, c: 3}));
 
-const quiz = {};
-quiz.students = [{ sid: 10, answers: [{ qid: 2, ans: "b" }, { qid: 3, ans: "a" }, { qid: 1, ans: "b" }] },
-{ sid: 11, answers: [{ qid: 1, ans: "e" }, { qid: 2, ans: "a" }, { qid: 3, ans: "b" }] },
-{ sid: 12, answers: [{ qid: 3, ans: "b" }, { qid: 2, ans: "a" }, { qid: 1, ans: "d" }] }];
-quiz.key = [{ qid: 1, ans: "b" }, { qid: 2, ans: "a" }, { qid: 3, ans: "b" }];
+// const quiz = {};
+// quiz.students = [{ sid: 10, answers: [{ qid: 2, ans: "b" }, { qid: 3, ans: "a" }, { qid: 1, ans: "b" }] },
+// { sid: 11, answers: [{ qid: 1, ans: "e" }, { qid: 2, ans: "a" }, { qid: 3, ans: "b" }] },
+// { sid: 12, answers: [{ qid: 3, ans: "b" }, { qid: 2, ans: "a" }, { qid: 1, ans: "d" }] }];
+// quiz.key = [{ qid: 1, ans: "b" }, { qid: 2, ans: "a" }, { qid: 3, ans: "b" }];
 
-/**
- * 
- * @param {Object} ans1 is an answer object
- * @param {Object} ans2 is an answer object 
- * @returns {number} difference of the identifiers
- */
- function answerComparator(ans1, ans2) {
-     let sorted=[];
-     for(const sor of quiz.students){
-        let temp=sor.answers.sort((a,b)=>a.qid>b.qid?1:-1) 
-        console.log(temp)//check 
-        sorted.push(temp)
-   }
-   return sorted;
-}
-   console.log(answerComparator(quiz))
+// /**
+//  * 
+//  * @param {Object} ans1 is an answer object
+//  * @param {Object} ans2 is an answer object 
+//  * @returns {number} difference of the identifiers
+//  */
+//  function answerComparator(ans1, ans2) {
+//      let sorted=[];
+//      for(const sor of quiz.students){
+//         let temp=sor.answers.sort((a,b)=>a.qid>b.qid?1:-1) 
+//         console.log(temp)//check 
+//         sorted.push(temp)
+//    }
+//    return sorted;
+// }
+//    console.log(answerComparator(quiz))
  /* let sortedAn=quiz.students.answers.sort((ans1,ans2)=>ans1.qid>ans2.qid?1:-1)
  console.log(sortedAn); */
  
@@ -323,23 +323,78 @@ const account = {  balance: 10, debit: debit };
 const myDebit = account.debit;
 console.log(myDebit(5));
 //ttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt
-let lama = {
-    x: 2,
-      bar: function() {
-        console.log("ma1: ", this);
-        this.y = true;
-        console.log("ma2: ", this);  }};
+
+function computeCharges(charges) {
+    const report = [];
+    for (const cust of charges) {
+      const custReport = {};
+      custReport.average = average(cust.charges);
+      custReport.maximum = maximum(cust.charges);
+      report.push(custReport);
+    }
+    return report;
+  }
+  
+  function average(arr) {
+    let sum = 0;
+    for (const num of arr) {
+      sum += num;
+    }
+    const average = sum / arr.length;
+    return average;
+  }
+  
+  function maximum(arr) {
+    let max = 0;
+    for (const num of arr) {
+      if (num > max) {
+        max = num;
+      }
+    }
+    return max;
+  }
+  const chargesArray = [{
+      custId: 1,
+      charges: [1, 2, 3]
+    },
+    {
+      custId: 2,
+      charges: [10, 20, 30]
+    },
+    {
+      custId: 3,
+      charges: [100, 200, 300]
+    },
+  ]
+  console.log(computeCharges(chargesArray));
     
-    let lamalin = {
-      bat: function() {
-        this.foo();
-        console.log("lin1: ", this);  },//global
-    
-      __proto__: lama,
-    
-      foo: function() {
-        this.bar();
-        console.log("lin2: ", this);  },
-    };
-    console.log(lamalin.bat());
-    
+
+  //REVERSE ALL
+  function reverseMove(str, steps) {
+    const newArray = [];
+    const wordArray = str.split(" ");
+    for (const word of wordArray) {
+      newArray.push(reverseWord(word));
+    }
+  //  debugger;
+    const moved = move(newArray, steps);
+    const invertedSentence = moved.join(" ");
+    return invertedSentence;
+  }
+  
+  
+  function reverseWord(word) {
+    const letterArray = word.split("");
+    letterArray.reverse();
+    return letterArray.join("");
+  }
+  
+  function move(arr, num) {
+    const movedArray = [];
+    for (let i = 0; i < arr.length; i++) {
+      const moveIndex = (i + num) % arr.length;
+      movedArray[moveIndex] = arr[i];
+    }
+    return movedArray;
+  }
+  console.log(reverseMove("I am great", 0));
