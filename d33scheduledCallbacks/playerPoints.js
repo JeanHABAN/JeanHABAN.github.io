@@ -11,8 +11,8 @@ Try to use map and reduce in your functions as appropriate. */
 
 function findTotalScores(teamStatisticsArr) {
     let arrScore = [];
-    for(const score of teamStatisticsArr){
-        arrScore.push({jersey : score.jersey, total : findTotalPlayerPoints(score)});
+    for(const player of teamStatisticsArr){
+        arrScore.push({jersey : player.jersey, total : findTotalPlayerPoints(player)});
     }
     return arrScore;
 
@@ -20,8 +20,8 @@ function findTotalScores(teamStatisticsArr) {
 
 //map 
 function findTotalScores(teamStatisticsArr){
-    return teamStatisticsArr.map(scores =>{
-        return {jersey:scores.jersey, total : findTotalPlayerPoints(scores)} 
+    return teamStatisticsArr.map(player =>{
+        return {jersey:scores.jersey, total : findTotalPlayerPoints(player)} 
     })
     }
 
