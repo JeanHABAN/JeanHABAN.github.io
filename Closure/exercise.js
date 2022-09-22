@@ -32,3 +32,21 @@ let addTo = function(){
     return passed + inner;
 };
 console.log(addTo());
+
+// quiz
+
+function makeCounter() {
+    let count = 0;
+  
+    return function(value) {
+        if(value > 1){
+            console.log("Warning:  increment was by value greater than 1:", value);
+        }
+      return count += value;
+    }
+  }
+ 
+  const myCounter = makeCounter();
+  
+  console.log(myCounter(10));
+  console.log(myCounter(10));
