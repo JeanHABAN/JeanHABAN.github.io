@@ -55,7 +55,7 @@ askPassword2(loginOk, loginFail, "rockstar");
 
 /* You need the module.exports when testing in node.  Comment it out when you send your file to the browser 
 */
-module.exports = {askPassword, user, askPassword2, user2 }; //add all of your function names here that you need for the node mocha tests
+//module.exports = {askPassword, user, askPassword2, user2 }; //add all of your function names here that you need for the node mocha tests
 
 //Fix the code below using an arrow function and then using bind...............
 let group = {
