@@ -1,6 +1,6 @@
 "use strict";
 /*eslint-disable*/
-module.exports = { spy };
+//module.exports = { spy };
 
 function spy(func) {
     return function (args) {
