@@ -51,11 +51,15 @@ function multiplyEvens(...argsArray){
 console.log(multiplyEvens(1, 6, 3, 4, 17, 2));
 
 
-let john = { name: "John", surname: "Smith", age: 10 };
-let pete = { name: "Pete", surname: "Hunt", age: 20 };
-let people = [ john, pete];
+// let john = { name: "John", surname: "Smith", age: 10 };
+// let pete = { name: "Pete", surname: "Hunt", age: 20 };
+// let people = [ john, pete];
 
-//Use the map function to map the people array to the following:
-const mappedArr = people.map(person => ({}))
-[{ fullName: "John Smith", age: 10 },
-{ fullName: "Pete Hunt", age: 20 },]
+// //Use the map function to map the people array to the following:
+// const mappedArr = people.map(person => ())
+// [{ fullName: "John Smith", age: 10 },
+// { fullName: "Pete Hunt", age: 20 },]
+
+let user = {
+    
+}
