@@ -15,12 +15,12 @@
          </div>
          <div class="form-container">
             <div class="form-inner">
-               <form action="home.html" class="login" method="post">
+               <form id="myForm" action="#" class="login">
                   <div class="field">
-                     <input type="text" placeholder="Email Address" title="Email pattern required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required />
+                     <input id="email" type="text" placeholder="Email Address" title="Email pattern required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required />
                   </div>
                   <div class="field">
-                     <input type="password" pattern=".{8,}" title="At least 8 characters required" placeholder="Password" required />
+                     <input id="password" type="password" pattern=".{8,}" title="At least 8 characters required" placeholder="Password" required />
                   </div>
                   <div class="pass">
                     <div class="pass-validate">
@@ -32,7 +32,7 @@
                   </div>
                   <div class="field btn">
                      <div class="btn-layer"></div>
-                     <input type="submit" value="Login">
+                     <input type="submit" value="Login"id='login'>
                   </div>
                   <div class="signup-link">
                      <a href="signup.html">Create A New</a>
@@ -42,23 +42,22 @@
          </div>
       </div>
       <script>
-         const loginText = document.querySelector(".title-text .login");
-         const loginForm = document.querySelector("form.login");
-         const loginBtn = document.querySelector("label.login");
-         const signupBtn = document.querySelector("label.signup");
-         const signupLink = document.querySelector("form .signup-link a");
-         signupBtn.onclick = (()=>{
-           loginForm.style.marginLeft = "-50%";
-           loginText.style.marginLeft = "-50%";
-         });
-         loginBtn.onclick = (()=>{
-           loginForm.style.marginLeft = "0%";
-           loginText.style.marginLeft = "0%";
-         });
-         signupLink.onclick = (()=>{
-           signupBtn.click();
-           return false;
-         });
+         // Login btn
+         let loginBtn = document.getElementById("login");
+         let username = document.getElementById("email");
+         let password = document.getElementById("password");
+      
+
+         loginBtn.onclick =(
+            () => {
+               if(username.value == "admin@miu.edu" && password.value == "admin"){
+                  window.location = "../inventory/inventory.html";
+               }else{
+                  window.location = "../home.html";
+               }
+            }
+         );
+         
       </script>
    </body>
 </html>
