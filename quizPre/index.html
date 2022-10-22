@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function getValue() {
+        //create checkbox
+        let label = document.createElement("label");
+        let button = document.querySelector("button");
+        button.before(label);
+        label.outerHTML='<label>Skills</label>'+
+    '<input type="checkbox" value="java">'+
+    '<label>Java</label>'+
+    '<input type="checkbox" value="javaScript">'+
+    '<label>JavaScript</label>'; 
+
+      }
+
+    </script>
+  </head>
+  <body>
+    <button onclick="getValue()">Get Value</button>
+    <label for="">Skills</label><br />
+    <input type="checkbox" value="java" />
+    <label for="">javaScript</label>
+    <input type="checkbox" value="javascript" />
+    <label for="">javascript</label>
+
+  
+  </body>
+</html>

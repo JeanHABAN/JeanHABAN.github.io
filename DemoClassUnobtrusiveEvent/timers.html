@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // Show and Hide Banner after 2 seconds
+      // 1. hide
+      window.onload = onloadHandler;
+      function onloadHandler() {
+        setTimeout(function () {
+            let divP = document.querySelector("div");
+            divP.style.display = "none";
+        }, 2000)
+
+        //2. Bring back the banner after 2 seconds.
+        setTimeout(function () {
+          let divP = document.querySelector("div");
+          divP.style.display = "block";
+        }, 4000);
+
+        /*Toggle display of Banner every 2 seconds( if its shown, hide it, if its hidden,
+          show it) and stop the toggling after 10 seconds
+        */
+        
+      }
+    </script>
+  </head>
+
+  <body>
+    <div style="background-color: yellow">Test</div>
+    <p>My Text</p>
+  </body>
+</html>
+//Bring back the banner after 2 seconds.

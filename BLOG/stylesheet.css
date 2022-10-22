@@ -1,0 +1,68 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    gap: 30px;  
+}
+header{
+    background-color: white;
+    height: 80px;
+    display: flex;
+    width: 100%;
+    gap: 10%;
+    margin-left: 10px;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+header div.button{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+header div.name{
+    text-align: center;
+    padding-top: 10px;
+    margin-left: 10px;
+    
+}
+
+section{
+ display: grid;
+ grid-template-columns: 80% auto;
+ height: 100%;
+ background-color: rgb(230, 243, 243);
+ width: 80%;
+}
+.content1{
+    background-color:whitesmoke;
+
+}
+
+.content2{
+    background-color: whitesmoke;
+    margin-right: 12px;
+}
+.title{
+    background-color: white;
+}
+.btn{
+    display: flex;
+    gap: 5px;
+    background-color: white;
+}
+.button2{
+    border: 1px solid;
+    text-align: left;
+    height: 25px;
+    width: 100px;
+}
+
+.button3{
+    border: 2px solid;
+    text-align: left;
+    height: 15px;
+    background-color: antiquewhite;
+}
+.posts {
+    background-color: white;
+}
+

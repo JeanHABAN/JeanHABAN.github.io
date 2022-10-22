@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RADIO BUUTON</title>
+</head>
+<body>
+    <p>click on button to add new radio</p>
+    <div id="container"></div>
+    <div>
+        <button id="submit">add radio</button>
+
+    </div>
+    <!-- <label for="">Contact</label> -->
+    <script>
+    //CREATING SINGLE INPUT RADIO BUTTON DYNAMICALLY
+
+       document.getElementById('submit').onclick=function(){
+        let radiobox = document.createElement('input');
+        radiobox.type='radio';
+        radiobox.id ='contact';
+        radiobox.value = 'email';
+        let label = document.createElement('label');
+        label.htmlFor ='contact';
+
+        let description = document.createTextNode('Email');
+        label.appendChild(description);
+
+        let newline = document.createElement('br');
+
+        let container = document.getElementById('container');
+        container.appendChild(radiobox);
+        container.appendChild(label);
+        container.appendChild(newline);
+       }  
+
+       
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function clickMe(){
+            let demo = document.getElementById("demo");
+            demo.innerHTML="hello javascript";
+            let turnOff = document.getElementById('myImage').src="pic_bulboff.gif";
+            let turnOn =document.getElementById('myImage').src="pic_bulbon.gif";
+            
+        }
+    </script>
+</head>
+<body>
+    <p id="demo">this gonna p content </p>
+
+    
+    <button type="button" onclick= "clickMe()">click here</button>
+    
+   <br>
+   <br>
+   <!-- turn off light -->
+   <button type="button" onclick= "clickMe()">turn on light</button>
+   <img id="myImage" src="/ReviewMid/pic_bulboff.gif" style="height: 70px;" alt="">
+   <button type="button" onclick= "clickMe()">turn off light</button>
+
+
+
+</body>
+</html>

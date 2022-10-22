@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+        .form-row{
+            padding: 10px;
+            display: flex;
+
+        }
+        .form-row label{
+            padding-right: 10px;
+
+        }
+        .form-row input{
+            flex :1
+        }
+        .col-layout{
+            display: flex;
+            max-width: 1300px;
+            background-color: rgb(176, 202, 202);
+            margin: 40px auto 0 auto;
+            line-height: 1.65;
+            padding: 20px 50px;
+        }
+        .main{
+            flex:2;
+            order: 2;
+        }
+        .sideOne{
+            flex:1;
+            order: 1;
+        }
+        .sideTwo{
+            flex:1;
+            order:3;
+        }
+        .otherContainer{
+            display: flex;
+            margin: 10px;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .call1{
+            background-color: rgb(87, 87, 102);
+            
+        }
+        .call2{
+            background-color: rgb(107, 93, 93);
+
+        }
+        .call3{
+            background-color: rgb(76, 114, 76);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-row">
+            <label for="name">Name</label>
+            <input type="text" id="name">
+            <input type="button" value="submit">
+        </div>
+        <div class="form-row">
+            <label for="phone">phone#</label>
+            <input type="text" id="name">
+        </div>
+        <div class="form-row">
+            <label for="email">e-mail</label>
+            <input type="text" id="name">
+        </div>
+
+    </div>
+    <div class="col-layout">
+        <div class="main">
+            <h2>Main column</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam voluptates totam fugit nostrum! Recusandae facilis, eum, aspernatur quod repudiandae ipsa possimus distinctio officiis totam nobis dicta, enim nemo architecto sunt.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas doloribus, tempora quam natus, ullam magni veritatis error, ad incidunt delectus voluptatibus vel unde ex amet sit debitis aut nisi nihil?</p>
+    
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure id, dolores illum perspiciatis voluptatum ea fugiat! Obcaecati vel rem voluptatum.
+        </div>
+        <div class="sideOne">
+            <h3>sideOne</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita blanditiis ab possimus sapiente minus? Asperiores atque deserunt ducimus non nemo incidunt odit natus unde aliquid.</p>
+
+        </div>
+        <div class="sideTwo">
+            <h3>sideTwo</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, aspernatur. Sint fugit culpa dolores dolorem officiis molestiae tenetur, beatae rerum distinctio ullam quia eos alias voluptate, deserunt facilis, necessitatibus similique itaque! Illum, consequatur deserunt assumenda ut cumque perspiciatis fugiat unde!</p>
+        </div>
+        
+    </div>
+    <div class="otherContainer">
+        <div class="call1">
+            <h3>heading1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eligendi minima qui non rerum? Consectetur distinctio a quas accusantium, quidem</p>
+
+        </div>
+        <div class="call2">
+            <h3>heading1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eligendi minima qui non rerum? Consectetur distinctio a quas accusantium, quidem</p>
+            
+        </div>
+        <div class="call3">
+            <h3>heading1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eligendi minima qui non rerum? Consectetur distinctio a quas accusantium, quidem</p>
+            
+        </div>
+        
+        
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise</title>
+    <script>
+
+      function dom() {
+        //Copy input from one to other
+        let ele = document.getElementById("userName");
+        // console.log(ele);
+        let eleValue = ele.value;
+        let copy = document.getElementById("copy");
+        copy.value = eleValue;
+
+        // 1. Change Text of Div,P,textInput,link
+        //a. change text of div
+        let myDIV1 = document.getElementById("myDIV");
+        myDIV1.innerHTML = "new text";
+        //b. change text of p
+        let myDv = document.getElementById("myP");
+        myDv.innerHTML ="you are right";
+
+        //c. change text Input
+        document.querySelector('input[name="myInput"]').value='whatspp';
+    
+            // 2. Change the image,
+        let pic =document.getElementById("image")
+        pic.setAttribute("src","/blogC/call.png")
+
+        // 3. change the address of link
+       let lin = document.getElementById("web")
+       lin.setAttribute("href", "http://www.yahoo.com");
+        lin.innerHTML="Yahoo";
+        // 3. Change the value of textInput,textArea
+
+        document.getElementById("userName").value="Jean";
+    
+        // 4. Create and add Div,p,img,link, textInput,textArea,button,checkbox,radio
+
+        
+      }
+    </script>
+  </head>
+  <body>
+    <img id="image" src="/BLOG/miu.jpg" style="height: 60px;" alt="" />
+    <!-- used to change div -->
+    <div id="myDIV">My Text</div>
+    <!-- used to change p -->
+    <p id="myP">we have good day</p>
+    
+    <!-- used to change value of textInput -->
+    <label>UserName</label>
+    <input type="text" id="userName" value="James"/>
+    
+    <!-- used for changing text input -->
+    user: <input type="text"  name="myInput" id="userName" Myattr="myAttrValue"/>
+     
+    <!-- used to change url link -->
+    <a id="web" href="http://www.google.com" >Google</a>
+    <br />
+    <!-- used to copy -->
+    <label>Copy</label>
+    <input type="text" id="copy" />
+    <input type="button" onclick="dom()" value="Submit"/>
+  </body>
+</html>

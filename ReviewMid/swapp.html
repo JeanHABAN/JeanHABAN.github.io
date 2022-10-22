@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function clickMe(){
+            let fName = document.getElementById("fName");
+            let lName = document.getElementById("lName");
+            let temp = fName.value;
+            fName.value = lName.value;
+            lName.value = temp;
+
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <label for="#">firstName</label>
+        <input type="text" id="fName">
+    </div>
+    <br>
+    <div>
+        <label for="#">lastName</label>
+        <input type="text" id="lName">
+    </div>
+    <input type="button" onclick="clickMe()" value="submit">
+</body>
+</html>

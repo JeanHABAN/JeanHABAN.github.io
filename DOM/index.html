@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function alertThetext(){
+            console.log("gov");
+            let ele = document.getElementById("username");
+            let eleValue = ele.value;
+            let copy = document.getElementById("copy");
+            copy.setAttribute("value",eleValue);
+            console.log(ele);
+          
+
+            // alert(ele);
+            // ele.value = "myValue"
+            // console.log("type=",ele.getAttribute('id'));
+ 
+           // ele.setAttribute("type",'radio');
+        }
+    </script>
+</head>
+<body>
+    <label>username</label>
+    <input type="text" id="username" myAttr="myAttrValue"/>
+    <br/>
+    <label>copy</label> 
+    <input type="text" id="copy"/>
+    <input type="button" onclick="alertThetext()" value="submit"> 
+
+    <!-- <textarea name="" id="" cols="" rows=""></textarea>
+    <input type="text">
+    <input type="text"> -->
+    
+</body>
+</html>

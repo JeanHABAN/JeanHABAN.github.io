@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <script>
+      function myFunction() {
+        // 4. Create and add Div,p,img,link, textInput,textArea,button,checkbox,radio
+        let picture = document.getElementById("image")
+        picture.setAttribute("src","/blogC/call.png");
+
+        let text = document.getElementById("quote");
+        text.innerHTML = "great idea!!!";
+        let word = document.getElementById("desc");
+        word.style.backgroundColor="red";
+
+        let word3 = document.getElementById("vis");
+        word3.style.backgroundColor="yellow";
+        let more = document.getElementById("read");
+        more.innerHTML="read carefully you will get enough information";
+        more.style.color="red";
+        let use = document.getElementById("name");
+        let psw = document.getElementById("password");
+
+
+        // if(use!=="my12"){
+        //     alert("username invalid");
+        // }
+        
+        // if(psw!=="mine12"){
+        //     alert("invalid password");
+        // }
+        // if(use!=="my12"&& psw!=="mine12"){
+        //     alert("Congratulations!!!!!!!!!");
+        // }
+      }
+    </script>
+    <style>
+        .login{
+            display: grid;
+            gap: 20px;
+            float: right;
+
+        }
+    </style>
+  </head>
+  <body>
+    <div class="form" style="border-bottom:2px solid ;padding: 50px; background-color: aquamarine;">
+      <div class="login">
+        <div class="user">
+          <label for="username">UserName</label>
+          <input type="text" id="name" /> 
+        </div>
+
+        <div class="pasw">
+          <label for="password">password</label>
+          <input type="text" id="password"/>
+        </div>
+        <div style="display: flex;gap: 30px;">
+            <input type="button" onclick="myFunction()" value="sign up">
+            <input type="button" onclick="myFunction()" value="sign in">
+        </div>
+      </div>
+      <div>
+        <img id="image" src="/BLOG/miu.jpg" style="height:90px; float: left;" alt="">
+      </div>
+      <!-- <div> -->
+         <p id="quote"><h3>be kind and make world better</h3></p>
+      <!-- </div> -->
+    </div>
+    <br>
+    <div style="margin-top: 20px; display: grid; grid-template-columns: 20% 50% 0%;">
+        <div style="float: left;">
+        <h1>Mission</h1>
+        <textarea name="mission" id="desc" cols="30" rows="10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores vero obcaecati iusto praesentium blanditiis molestiae consequuntur aliquid harum incidunt, veritatis voluptatum saepe quisquam, perspiciatis beatae nulla nisi sit earum. Ipsam?</textarea>
+        </div>
+        
+        <div style="float:right;">
+        <h1>vision</h1>
+        <textarea name="vision" id="vis" cols="30" rows="10">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam, eos explicabo, ut ipsam magnam aliquam distinctio eveniet doloremque, placeat eum rerum. Ipsum nostrum, suscipit numquam pariatur sit aliquid odit doloremque nobis dignissimos, in, laudantium velit cum reiciendis unde tempore repellendus!</textarea>
+        </div>
+        <div>
+            <img src="/DOM/tech.jpg" style="height: 300px;width: 400px;" alt="">
+        </div>
+       
+
+    </div>
+
+    <div >
+        <p id="read">for more information check on website below</p>
+        <a id="web" href="//softauthor.com/javascript-working-with-images/" >foftauthor.com</a>
+    </div>
+    
+
+    
+  </body>
+</html>

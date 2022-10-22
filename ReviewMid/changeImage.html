@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // document.addEventListener("click",myFunction);
+        function clickMe(){
+            let pic = document.getElementById("image");
+            pic.setAttribute("src","/ReviewMid/redFlower.jpeg");
+
+        }
+    </script>
+</head>
+<body>
+    <img id="image" src="/BLOG/miu.jpg" style="height: 40px;" alt="">
+
+    <input type="button" onclick="clickMe()" value="submit">
+    
+</body>
+</html>

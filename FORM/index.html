@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+   
+</head>
+<body>
+    
+    <div>
+        <input type="radio" name="fruit" value="Apple" id="Apple">
+        <label for="Apple">Apple</label>
+    </div>
+    <div>
+        <input type="radio" name="fruit" value="Banana" id="Banana">
+        <label for="Banana">Banana</label>
+    </div>
+    <div>
+        <input type="radio" name="fruit" value="Grapes" id="Grapes">
+        <label for="Grapes">Grapes</label>
+    </div>
+
+    <p>
+        <button id="btn">Show Selected Value</button>
+    </p>
+    <p id="output"></p>
+    <script>
+        const btn = document.querySelector('#btn');        
+        const radioButtons = document.querySelectorAll('input[name="fruit"]');
+        btn.addEventListener("click", () => {
+            let selectedFruit;
+            for (const radioButton of radioButtons) {
+                if (radioButton.checked) {
+                    selectedFruit = radioButton.value;
+                    break;
+                }
+            }
+            // show the output:
+            output.innerText = selectedFruit ? `You selected ${selectedFruit}` : `You haven't selected any fruit`;
+        });
+    </script>
+</body>
+</html>
+

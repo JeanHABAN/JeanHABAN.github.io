@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function clickMe(){
+            let fName = document.getElementById("fName");
+            let value1 = fName.value;
+            let lastName = document.getElementById("lName");
+            lastName.value = value1;
+
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <label for="#">firstName</label>
+        <input type="text" id="fName">
+
+    </div>
+    <br>
+    <div>
+        <label for="#">lastName</label>
+        <input type="text" id="lName">
+    </div>
+    <input type="button" onclick="clickMe()" value="submit">
+    
+</body>
+</html>

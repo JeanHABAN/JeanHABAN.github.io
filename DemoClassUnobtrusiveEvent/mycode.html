@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            let ull = document.querySelector("ul");
+            console.log(ull.children)
+            let arrItem = ull.children;
+            //create new li
+            let newli = document.createElement("li");
+            //get last one 
+            let lastli = arrItem[0];
+            lastli.before(newli);
+            newli.innerHTML="lake";
+        }
+    </script>
+</head>
+<body>
+    <ul>
+        <li>EArth</li>
+        <li>Moon</li>
+    </ul>
+</body>
+</html>

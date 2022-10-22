@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- how to create checkbox in html -->
+    <!-- <label for="accept">
+        <input type="checkbox" id="accept" name="accept" value="yes"> Accept
+    </label>
+    <p><button id="btn">submit</button></p>
+    <br> -->
+
+    <!-- <label for="refuse">
+        <input type="checkbox" id="refuse" name="refuse" value="no"> refuse
+    </label> -->
+
+    <!-- Getting values of multiple selected checkboxes -->
+    <label for="c1">
+      <input type="checkbox" id="c1" name="color" value="red" />Red
+    </label>
+    <label for="c2">
+      <input type="checkbox" id="c2" name="color" value="green" />green
+    </label>
+    <label for="c3">
+      <input type="checkbox" id="c3" name="color" value="blue" />blue
+    </label>
+    <p><button id="btn" onclick="myFunction()">get selected</button></p>
+    <!-- Checking if a checkbox is checked -->
+    <!-- <script>
+      const checking = document.querySelector('#accept');
+      console.log(checking.checked);//false
+      // Getting checkbox values
+      const btn = document.querySelector('#btn');
+      btn.onclick=()=>{
+          alert(checking.value);
+      };
+      //Getting values of multiple selected checkboxes
+      const btn = document.querySelector('#btn');
+      btn.addEventListener('click',(event)=>{
+          let checkboxes = document.querySelectorAll('input[name="color"]:checked');
+          let values=[];
+          checkboxes.forEach((checkbox) => {
+              values.push(checkbox.value);
+
+          });
+          alert(values);
+      });
+      
+    </script> -->
+  </body>
+  <script>
+    function myFunction() {
+      let checkboxes = document.querySelectorAll('input[name="color"]:checked');
+      let values = [];
+      for (let val of checkboxes) {
+        values.push(val.value);
+      }
+      alert(values);
+    }
+  </script>
+</html>

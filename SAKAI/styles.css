@@ -1,0 +1,65 @@
+.log {
+    border: 2px solid blue;
+    background-color: rgb(59, 59, 187);
+    height: 50px;
+  }
+  img {
+    float: left;
+    border-radius: 50%;
+  }
+  .name {
+    float: left;
+  }
+  .login {
+    float: right;
+    border-radius: 100px solid green;
+    background-color: green;
+    margin-right: 10px;
+    text-align: center;
+  }
+  .backg {
+    float: left;
+    margin-right: 100px;
+    text-align: center;
+    border: 2px solid lightgray;
+    margin-top: 15px;
+    padding-right:50px;
+  }
+  .std {
+    float: left;
+    text-align: center;
+    border: 2px solid lightgray;
+    margin-top: 15px;
+    padding-right: 50px;
+  }
+  .admin{
+    float: right;
+    margin-right: 100px;
+    text-align: center;
+    border: 2px solid lightgray;
+    margin-top: 15px;
+    padding-right: 50px;
+  }
+  .line{
+   border: 2px solid rgb(239, 239, 241);
+    background-color: rgb(244, 244, 247);
+    height: 50px;
+    margin-top: 25%;
+    text-align: center;
+    padding-top: 10px;
+  }
+  .text{
+    display: flex;
+  }
+  .left{
+      float: left;
+      margin: 5px;
+  }
+  .right{
+      float: right;
+      margin: 5px;
+  }
+  a{
+    background-color: rgb(190, 190, 207)
+    ;
+  }
