@@ -1,0 +1,23 @@
+div.promo-banner {
+    width: 150px;
+    height: 70px;
+    min-width: 150px;
+    min-height: 50px;
+    max-width: 200px;
+    max-height: 100px;
+    overflow: hidden;
+    display: block;
+  }
+  div.promo-banner + div.carousel-caption{
+      padding: 0px;
+      margin-top: 250px;
+  
+  }
+  div.svg-logo{
+      width: 200px;
+      height: 50px;
+  }
+  div.svg-aerie svg{
+      width: 46px;
+      height: 20px;
+  }
